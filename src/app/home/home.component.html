@@ -1,0 +1,17 @@
+<div class="home-page">
+
+  <div *appShowAuthed="false">
+    <div class="container">
+      <h1>RxAlternative </h1>
+      <p>Application, for alternative drugs</p>
+      <span>
+        <a routerLink="/login">Login</a>
+      </span>
+    </div>
+  </div>
+
+  <div  *appShowAuthed="true">
+    <p> User logged in successfully.</p>
+  </div>
+
+  </div>

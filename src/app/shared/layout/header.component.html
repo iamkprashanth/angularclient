@@ -1,0 +1,27 @@
+<nav>
+
+  <div *appShowAuthed="false">
+    <div style="width: 50%;float: left;text-align: left;">
+      <button routerLink="/">RxAlternatives</button>
+    </div>
+    <!-- Show this for logged out users -->
+    <div style="width: 50%;float: right;text-align: right;">
+      <button routerLink="/" style="margin-right: 5px;">Home</button>
+      <button routerLink="/login" routerLinkActive="active">Sign in</button>
+    </div>
+  </div>
+
+  <!-- Show this for logged in users -->
+  <div *appShowAuthed="true">
+    <div style="width: 50%;float: left;text-align:  left;">
+      <button routerLink="/" routerLinkActive="active">RxAlternatives</button>
+    </div>
+    <div style="width: 50%;float: right;text-align:  right;">
+      <button routerLink="/profile" routerLinkActive="active" style="margin-right: 5px;" >Profile</button>
+      <button (click)="logout()">
+        Logout.
+      </button>
+    </div>
+  </div>
+
+</nav>
