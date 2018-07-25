@@ -1,12 +1,17 @@
 {
   "name": "login-app-client",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "npm start",
-    "build": "ng build"
+    "start": "node server.js",
+    "test": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
   },
-  "private": true,
+  "main": "server.js",
+  "license": "ISC",
   "dependencies": {
     "@angular/animations": "^6.0.3",
     "@angular/common": "^6.0.3",
